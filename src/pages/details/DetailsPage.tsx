@@ -4,6 +4,12 @@ import { useLoaderData, Link } from "react-router-dom";
 export default function DetailsPage() {
   const { details } = useLoaderData() as DetailsLoaderResult;
 
+  const renderedKeywords = (details.keywords || []).map((keyword) => {
+    return <div key={keyword} className='border py-0.5 px-1 bg-slate-200 rounded'>
+      {keyword}
+    </div>
+  });
+
   return <div className="space-y-4">
 
     <Link to='/' className='btn btn-light mb-4'>
@@ -26,12 +32,8 @@ export default function DetailsPage() {
       <h3 className="text-lg font-bold">
         Keyword
       </h3>
-      <div className="p-3 bg-gray-200 rounded">
-        {
-          details?.keywords?.map((name) =>
-            <li key={name}>{name}</li>
-          )
-        }
+      <div className='flex gap-1'>
+        {renderedKeywords}
       </div>
     </div>
     <div>
