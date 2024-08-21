@@ -8,7 +8,7 @@ export class Footer extends React.Component {
             <div className="row">
               <div className="col-md-12">
                 <ul className="pull-right list-unstyled">                  
-                  <li>
+                  <li className="text-sm">
                       © By Hakan Baştürk {new Date().getFullYear()}
                   </li>
                 </ul>
