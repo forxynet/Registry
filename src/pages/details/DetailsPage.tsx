@@ -5,7 +5,7 @@ export default function DetailsPage() {
   const { details } = useLoaderData() as DetailsLoaderResult;
 
   const renderedKeywords = (details.keywords || []).map((keyword) => {
-    return <div key={keyword} className='border py-0.5 px-1 bg-slate-200 rounded'>
+    return <div key={keyword} className='p-3 bg-gray-200 rounded'>
       {keyword}
     </div>
   });
