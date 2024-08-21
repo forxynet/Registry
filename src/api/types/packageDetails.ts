@@ -2,15 +2,9 @@ export interface PackageDetails {
   name: string;
   description: string;
   readme: string;
-  author: {
-    email: string;
-    name: string;
-  };
-  maintainers: {
-    email: string;
-    name: string;
-  }[];
+  author: string[];
+  maintainers: string[];
   license: string;
   homepage:string;
-  keywords: string[];
+  keywords: string[];  
 }

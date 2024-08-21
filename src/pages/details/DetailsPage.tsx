@@ -4,8 +4,8 @@ import { useLoaderData, Link } from "react-router-dom";
 export default function DetailsPage() {
   const { details } = useLoaderData() as DetailsLoaderResult;
 
-  const renderedKeywords = (details.keywords || []).map((keyword) => {
-    return <div key={keyword} className='p-3 bg-gray-200 rounded'>
+  const renderedKeywords = (details.keywords || []).map((keyword, index) => {
+    return <div key={index} className='p-3 bg-gray-200 rounded'>
       {keyword}
     </div>
   });
@@ -35,7 +35,7 @@ export default function DetailsPage() {
       <div className='flex gap-1'>
         {renderedKeywords}
       </div>
-    </div>
+    </div>    
     <div>
       <h3 className="text-lg font-bold">
         License
