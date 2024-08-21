@@ -6,6 +6,16 @@ import DetailsPage from "./pages/details/DetailsPage";
 import { searchLoader } from "./pages/search/searchLoader";
 import { detailsLoader } from "./pages/details/detailsLoader";
 import { homeLoader } from "./pages/home/homeLoade";
+import { PageNotFound } from "./pages/PageNotFound";
+
+const NotFound = () => {
+  return (
+    <>
+      <h1>404 - Page Not Found</h1>
+      <p>Sorry, the page you are looking for could not be found.</p>
+    </>
+  );
+};
 
 const router = createBrowserRouter([
   {
@@ -25,7 +35,16 @@ const router = createBrowserRouter([
       {
         path: "/packages/:name",
         element: <DetailsPage />,
-        loader: detailsLoader,
+        loader: detailsLoader,        
+      },
+      {
+        path: "/packages/:name/:name",
+        element: <DetailsPage />,
+        loader: detailsLoader,        
+      },
+      {
+        path: "*",
+        element: <PageNotFound />,             
       },
     ],
   },
