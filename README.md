@@ -1,4 +1,4 @@
-live: https://registry-bvtj.onrender.com/packages/typescript
+live: https://registry-bvtj.onrender.com/
 
 # React + TypeScript + Vite
 
