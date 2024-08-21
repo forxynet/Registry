@@ -11,7 +11,7 @@ export default function Header() {
       </div>
       <div className="w-full max-w-xl ml-4">
         <SearchInput />
-      </div>
+      </div>      
     </div>
   );
 }
