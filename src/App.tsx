@@ -8,15 +8,6 @@ import { detailsLoader } from "./pages/details/detailsLoader";
 import { homeLoader } from "./pages/home/homeLoade";
 import { PageNotFound } from "./pages/PageNotFound";
 
-const NotFound = () => {
-  return (
-    <>
-      <h1>404 - Page Not Found</h1>
-      <p>Sorry, the page you are looking for could not be found.</p>
-    </>
-  );
-};
-
 const router = createBrowserRouter([
   {
     path: "/",
